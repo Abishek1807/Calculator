@@ -1,0 +1,79 @@
+/*   '*' --> denotes all tags    */
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: #ecf0f3;
+    font-family: sans-serif;
+    outline: none;
+}
+/* Class endral . vaika vendum */
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* Horizantal aligning */
+    align-items: center;      /* Vertical Alingment */
+}
+
+.calculator{
+    background-color: #ecf0f3;
+    padding: 20px;
+    border-radius: 30px;
+    /* inset--> effect inside box ---> 5px(horizontal), 5px(verticle), 12px(blur) */
+    box-shadow: inset -5px -5px 12px gray,
+                      5px 5px 12px gray;
+    display: grid;
+    grid-template-columns: repeat(4,68px);
+    
+}
+
+
+/* input la apadiye thodangalam */
+input{
+    grid-column: span 4; /* will form 4 column and put every thing into it */
+    height: 70px;
+    width: 260px;
+    background-color: #ecf0f3;
+
+    /* inset--> effect inside box ---> 5px(horiontal), 5px(verticle), 12px(blur) */
+    box-shadow: inset 5px 5px 12px gray,  /* '+ value' endral effect --> Bottom right */
+                       -3px -3px 12px gray; /* '- value' endral effect --> Top left */
+    border: none;
+    border-radius: 30px;
+    color: rgb(70, 70, 70);
+    font-size: 50px;
+    text-align: end; /* Text starts from end of the box*/
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px; /* num kaana padding*/
+}
+
+button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: inset 5px 5px 12px gray,  /* '+ value' endral effect --> Bottom right */
+                       3px 3px 12px gray; /* '- value' endral effect --> Top left */
+    border: none; /* none kuduthan dhan mela kudutha shadow effect nalla theriyum */
+    border-radius: 50%;
+    margin: 6px;
+    font-size: 16px;
+    
+    
+}
+
+button:active{
+    transform: translate(3px);
+}
+
+/* equal button mattum konjam extra beautifying */
+.equal{
+    width: 120px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: inset 5px 5px 12px gray,  /* '+ value' endral effect --> Bottom right */
+                       3px 3px 12px gray; /* '- value' endral effect --> Top left */
+    border: none; /* none kuduthan dhan mela kudutha shadow effect nalla theriyum */
+}
